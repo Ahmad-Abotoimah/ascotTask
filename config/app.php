@@ -176,7 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         // jwt service provider
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
-
+        Laravel\Cashier\CashierServiceProvider::class,
     ],
 
     /*

@@ -28,6 +28,9 @@ Route::group([
     Route::post('login', 'App\Http\Controllers\AuthController@login');
     Route::post('logout', 'App\Http\Controllers\AuthController@logout');
     Route::post('refresh', 'App\Http\Controllers\AuthController@refresh');
-    Route::post('me', 'App\Http\Controllers\AuthController@me');
 
 });
+Route::get('user', 'App\Http\Controllers\AuthController@user')->middleware('auth');
+Route::post('product', 'App\Http\Controllers\ProductController@addProduct')->middleware('auth');
+Route::post('options', 'App\Http\Controllers\ProductController@addOptions')->middleware('auth');
+Route::post('coupon', 'App\Http\Controllers\CouponController@addCoupon')->middleware('auth');
